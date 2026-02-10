@@ -31,3 +31,6 @@ h1 {
   display: inline-block;
   margin: 10px auto 30px auto;
 }
+#toggleButton {
+  background-color: greenyellow;
+}

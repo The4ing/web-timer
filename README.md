@@ -46,7 +46,7 @@ The standard 3-button interface:
 
 
 
-### 2. Toggle Version (Branch: `version-2`)
+### 2. Toggle Version (Branch: `webTimer-v2`)
 
 A modern, minimalist approach using a **State-Based Toggle**:
 

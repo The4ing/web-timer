@@ -70,4 +70,4 @@ A modern, minimalist approach using a **State-Based Toggle**:
 
    ```bash
 
-   git clone [https://github.com/The4ing/web-timer.git](https://github.com/The4ing/web-timer.git)
+   git clone https://github.com/The4ing/web-timer.git

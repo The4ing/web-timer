@@ -7,7 +7,6 @@ const display = document.getElementById("clock-display");
 const startButton = document.getElementById("startButton");
 const stopButton = document.getElementById("stopButton");
 const resetButton = document.getElementById("resetButton");
-const toggleButton = document.getElementById("toggleButton");
 
 function timeToString(time) {
   let hour = Math.floor(time / 3600000);
@@ -22,35 +21,7 @@ function timeToString(time) {
   return `${hourString}:${minuteString}:${secondString}`;
 }
 
-startButton.addEventListener("click", startTimer);
-
-stopButton.addEventListener("click", stopTimer);
-
-resetButton.addEventListener("click", () => {
-  clearInterval(timerInterval);
-  isRunning = false;
-  display.textContent = "00:00:00";
-  elapsedTime = 0;
-});
-
-toggleButton.addEventListener("click", () => {
-  if (isRunning) {
-    stopTimer();
-    toggleButton.style.backgroundColor = "greenyellow";
-    toggleButton.textContent = "START";
-  } else {
-    toggleButton.style.backgroundColor = "rgb(255, 3, 3)";
-    toggleButton.textContent = "STOP";
-    startTimer();
-  }
-});
-
-function stopTimer() {
-  isRunning = false;
-  clearInterval(timerInterval);
-}
-
-function startTimer() {
+startButton.addEventListener("click", () => {
   if (isRunning) return;
   isRunning = true;
 
@@ -59,4 +30,16 @@ function startTimer() {
     elapsedTime = Date.now() - startTime;
     display.textContent = timeToString(elapsedTime);
   }, 10);
-}
+});
+
+stopButton.addEventListener("click", () => {
+  isRunning = false;
+  clearInterval(timerInterval);
+});
+
+resetButton.addEventListener("click", () => {
+  clearInterval(timerInterval);
+  isRunning = false;
+  display.textContent = "00:00:00";
+  elapsedTime = 0;
+});

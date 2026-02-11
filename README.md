@@ -58,6 +58,12 @@ A modern, minimalist approach using a **State-Based Toggle**:
 
 
 
+### 3. ⚛️ React Version (Branch - feature/WebTimer-React)
+Migrated from Vanilla JS to a component-based architecture.
+* **Tech:** React 18, Vite, CSS Modules.
+* **Features:** Modular components (`Header`, `Display`, `Buttons`), optimized rendering with `useRef`, and clean state management.
+* **Logic:** Separated formatting utilities from UI components.
+
 ---
 
 
